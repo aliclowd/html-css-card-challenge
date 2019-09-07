@@ -1,0 +1,419 @@
+@font-face {
+  font-family: "BreeSerif-Regular";
+  src: url("../fonts/BreeSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Asap-Bold";
+  src: url("../fonts/Asap-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Asap-BoldItalic";
+  src: url("../fonts/Asap-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Asap-Regular";
+  src: url("../fonts/Asap-Regular.ttf");
+}
+
+body {
+  cursor: default;
+  background: #2a2a2b;
+  color: #fff;
+  font-family: "BreeSerif-Regular";
+}
+
+.starbucksBtnStyle {
+  background: #04cc33;
+  padding: 10px 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  color: #fff;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.header {
+  background: #1a7bc1;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+.header-items {
+  min-height: 85px;
+  position: relative;
+  text-align: center;
+}
+
+.header-items .header-items-search, .header-items .header-items-title, .header-items .header-items-edit {
+  position: absolute;
+}
+
+.header-items-search {
+  right: 0;
+  top: 11px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.header-items-title {
+  right: 50%;
+  top: 0px;
+  font-family: "Asap-Regular";
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.header-items-title-main {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header-items-title-sub {
+  font-size: 18px;
+}
+
+.header-items-edit {
+  top: 11px;
+  left: 0;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.header-search-result {
+  display: none;
+  text-align: right;
+}
+
+.header-search-result input {
+  background: inherit;
+  color: #fff;
+  padding: 5px;
+}
+
+.header-search-result input::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+.header-search-result input:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.header-search-result input::-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.header-search-result input::placeholder {
+  color: #fff !important;
+}
+
+.content {
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.content-banner {
+  background: url("../img/starbucks-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-banner-ribbon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 155px;
+  height: 100px;
+  text-align: right;
+}
+
+.content-banner-ribbon-text {
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 33px;
+  background: #da0808;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(40deg);
+  width: 166px;
+  display: block;
+  position: absolute;
+  top: 19px;
+  right: -30px;
+}
+
+.content-banner-ribbon-text::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #8f0808;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8f0808;
+}
+
+.content-banner-ribbon-text::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #8f0808;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8f0808;
+}
+
+.content-banner-logo {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: url("../img/starbucks-logo.png") no-repeat center;
+  background-size: 80%;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.content-banner-texts {
+  margin-top: 15px;
+  font-family: "Asap-Regular";
+}
+
+.content-banner-texts-main {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content-banner-texts-sub {
+  font-size: 20px;
+  font-weight: normal;
+  color: #fdfdfd;
+}
+
+.content-banner-items {
+  text-align: center;
+  margin: 55px 0px;
+}
+
+.content-banner-items div {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 2px solid #6e685b;
+  border-radius: 50%;
+  font-size: 40px;
+  padding-top: 16px;
+  margin: 20px;
+}
+
+.content-banner-userIcon {
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  color: #a9a5a1;
+}
+
+.content-info {
+  background: #fff;
+  color: #000;
+  -webkit-box-shadow: 0 1px 4px 0 #a9a5a1;
+          box-shadow: 0 1px 4px 0 #a9a5a1;
+  border-bottom: 2px solid #eee7e1;
+  text-align: center;
+}
+
+.content-info-counters {
+  background: #fff;
+  display: inline-block;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #a9a5a1;
+  margin-top: -20px;
+}
+
+.content-info-counters-box {
+  display: inline-block;
+  margin: 20px;
+}
+
+.content-info-counters-box-counter {
+  font-size: 20px;
+  font-family: "Asap-Bold";
+}
+
+.content-info-counters-box-sub {
+  font-family: "Asap-Regular";
+}
+
+.content-info-btns {
+  margin-top: 20px;
+  width: 90%;
+  background: #fff;
+  display: inline-block;
+}
+
+.content-info-btns-state {
+  float: left;
+}
+
+.content-info-btns-socials {
+  float: right;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  max-height: 130px;
+  font-size: 25px;
+  direction: rtl;
+}
+
+.content-info-btns-socials div {
+  display: inline-block;
+  padding: 1px 10px;
+}
+
+.content-info-btns-socials .content-info-btns-left {
+  border-right: 1px solid #e5e5e5;
+}
+
+.content-info-btns-socials button {
+  border: none;
+  background: #fff;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #19b7f7;
+  cursor: pointer;
+}
+
+.content-location {
+  background: #eee7e1;
+  color: #000;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.content-location-box {
+  text-align: left;
+  width: 95%;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+  padding: 20px 20px 10px 20px;
+  background: #fff;
+  border: 1px solid #a9a5a1;
+}
+
+.content-location-box-icon {
+  display: inline-block;
+  height: 65px;
+  width: 65px;
+  background: url("../img/starbucks-icon.png") no-repeat center;
+  background-size: 80%;
+  vertical-align: top;
+}
+
+.content-location-box-location {
+  display: inline-block;
+  padding-top: 8px;
+}
+
+.content-location-box-location-heading {
+  font-family: "Asap-Bold";
+}
+
+.content-location-box-location-text {
+  font-family: "Asap-Regular";
+  color: #3b3b3b;
+}
+
+.footer {
+  background: #0d0d0c;
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-shadow {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.footer .beginShadow {
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#0d0d0c), to(transparent));
+  background: linear-gradient(to right, #0d0d0c, transparent);
+}
+
+.footer .endShadow {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#0d0d0c), to(transparent));
+  background: linear-gradient(to left, #0d0d0c, transparent);
+}
+
+.footer-swiper {
+  margin-top: 40px;
+}
+
+.footer-swiper-items {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-swiper-items div {
+  max-height: 30px;
+}
+
+.footer-swiper-items-text {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+  min-width: 80px;
+}
+
+.footer-swiper-items-active {
+  color: #04cc33;
+  border-bottom: 2px solid #747ee7;
+}
+
+.content-banner-items div {
+  margin: 2px;
+}
+
+.content-info-counters-box {
+  margin: 10px;
+}
+/*# sourceMappingURL=main.css.map */

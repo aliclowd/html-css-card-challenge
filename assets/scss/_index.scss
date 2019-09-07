@@ -1,0 +1,301 @@
+.header {
+  background: $color_blue;
+  padding: 10px;
+  overflow-x: hidden;
+  &-items {
+    min-height: 85px;
+    position: relative;
+    text-align: center;
+    %items {
+      position: absolute;
+    }
+    &-search {
+      @extend %items;
+      right: 0;
+      top: 11px;
+      font-size: 35px;
+      cursor: pointer;
+    }
+    &-title {
+      @extend %items;
+      right: 50%;
+      top: 0px;
+      font-family: "Asap-Regular";
+      transform: translate(50%, 0);
+      &-main {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      &-sub {
+        font-size: 18px;
+      }
+    }
+    &-edit {
+      @extend %items;
+      top: 11px;
+      left: 0;
+      font-size: 35px;
+      cursor: pointer;
+    }
+  }
+  &-search-result {
+    display: none;
+    text-align: right;
+    input {
+      background: inherit;
+      color: $color_white;
+      padding: 5px;
+      &::placeholder {
+        color: $color_white !important;
+      }
+    }
+  }
+}
+// .header
+
+.content {
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;
+  &-banner {
+    background: url("../img/starbucks-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-ribbon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: transparent;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      overflow: hidden;
+      width: 155px;
+      height: 100px;
+      text-align: right;
+      &-text {
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 33px;
+        background: $color_red;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(40deg);
+        width: 166px;
+        display: block;
+        position: absolute;
+        top: 19px;
+        right: -30px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid #8f0808;
+          border-right: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid #8f0808;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0px;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid transparent;
+          border-right: 3px solid #8f0808;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid #8f0808;
+        }
+      }
+    }
+    &-logo {
+      @include pic_inline_block(100px, 100px);
+      background: url('../img/starbucks-logo.png') no-repeat center;
+      background-size: 80%;
+      margin-top: 50px;
+      border-radius: 5px;
+      background-color: $color_white;
+    }
+    &-texts {
+      margin-top: 15px;
+      font-family: "Asap-Regular";
+      &-main {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      &-sub {
+        font-size: 20px;
+        font-weight: normal;
+        color: $color_white_darker;
+      }
+    }
+    &-items {
+      text-align: center;
+      margin: 55px 0px;
+      div {
+        @include pic_inline_block(100px, 100px);
+        border: 2px solid $color_gray;
+        border-radius: 50%;
+        font-size: 40px;
+        padding-top: 16px;
+        margin: 20px;
+      }
+    }
+    &-userIcon {
+      position: absolute;
+      bottom: 35px;
+      right: 50px;
+      @include pic_inline_block(20px, 20px);
+      font-size: 20px;
+      color: $color_gray_lighter;
+    }
+  }
+  //.content-banner
+  &-info {
+    background: $color_white;
+    color: $color_black;
+    box-shadow: 0 1px 4px 0 $color_gray_lighter;
+    border-bottom: 2px solid $color_location_background;
+    text-align: center;
+    &-counters {
+      background: $color_white;
+      display: inline-block;
+      width: 90%;
+      border-radius: 5px;
+      border: 1px solid $color_gray_lighter;
+      margin-top: -20px;
+      &-box {
+        display: inline-block;
+        margin: 20px;
+        &-counter {
+          font-size: 20px;
+          font-family: "Asap-Bold";
+        }
+        &-sub {
+          font-family: "Asap-Regular";
+        }
+      }
+    }
+
+    &-btns {
+      margin-top: 20px;
+      width: 90%;
+      background: $color_white;
+      display: inline-block;
+      &-state {
+        float: left;
+      }
+      &-socials {
+        float: right;
+        border: 1px solid $color_socials_border;
+        border-radius: 5px;
+        max-height: 130px;
+        font-size: 25px;
+        direction: rtl;
+        div {
+          display: inline-block;
+          padding: 1px 10px;
+        }
+        .content-info-btns-left {
+          border-right: 1px solid $color_socials_border;
+        }
+        button {
+          border: none;
+          background: #fff;
+          outline: none;
+          box-shadow: none;
+          color: $color_socials;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  //.content-info
+  &-location {
+    background: $color_location_background;
+    color: $color_black;
+    text-align: center;
+    padding-top: 10px;
+    &-box {
+      text-align: left;
+      width: 95%;
+      display: inline-block;
+      border-radius: 5px 5px 0 0;
+      padding: 20px 20px 10px 20px;
+      background: $color_white;
+      border: 1px solid $color_gray_lighter;
+      &-icon {
+        @include pic_inline_block(65px, 65px);
+        background: url('../img/starbucks-icon.png') no-repeat center;
+        background-size: 80%;
+        vertical-align: top;
+      }
+      &-location {
+        display: inline-block;
+        padding-top: 8px;
+        &-heading {
+          font-family: "Asap-Bold";
+        }
+        &-text {
+          font-family: "Asap-Regular";
+          color: $color_txt_black_lighter;
+        }
+      }
+    }
+  }
+  //.content-location
+}
+// .content
+
+.footer {
+  background: $color_footer;
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+  &-shadow {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    z-index: 1000;
+  }
+  .beginShadow {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      $color_black_gradiant_begin,
+      $color_black_gradiant_end
+    );
+  }
+  .endShadow {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      $color_black_gradiant_begin,
+      $color_black_gradiant_end
+    );
+  }
+  &-swiper {
+    margin-top: 40px;
+    &-items {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      div {
+        max-height: 30px;
+      }
+      &-text {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 18px;
+        min-width: 80px;
+      }
+      &-active {
+        color: $color_green;
+        border-bottom: 2px solid $color_hover_border;
+      }
+    }
+  }
+}

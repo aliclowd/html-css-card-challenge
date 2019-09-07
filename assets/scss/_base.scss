@@ -1,0 +1,48 @@
+//variables
+$color_white: #fff;
+$color_white_darker: #fdfdfd;
+$color_black: #000;
+$color_black_gradiant_begin: #0d0d0c;
+$color_black_gradiant_end: transparent;
+$color_background: #2a2a2b;
+$color_blue: #1a7bc1;
+$color_blue_lighter: #20b8f7;
+$color_green: #04cc33;
+$color_red: #da0808;
+$color_gray: #6e685b;
+$color_gray_lighter: #a9a5a1;
+$color_hover_border: #747ee7;
+$color_socials: #19b7f7;
+$color_location_background: #eee7e1;
+$color_txt_black_lighter: #3b3b3b;
+$color_footer: #0d0d0c;
+$color_socials_border:#e5e5e5;
+$positions: left right center;
+
+//mixins
+@mixin all_font_family($params...) {
+  @each $param in $params {
+    @font-face {
+      font-family: $param;
+      src: url("../fonts/#{$param}.ttf");
+    }
+  }
+}
+@mixin pic_inline_block($height, $width) {
+  display: inline-block;
+  height: $height;
+  width: $width;
+}
+@mixin transitions($params...) {
+  transition: $params;
+  -moz-transition: $params;
+  -webkit-transition: $params;
+}
+
+@mixin text_alight() {
+  @each $position in $positions {
+    .txt-#{$position} {
+      text-align: $position;
+    }
+  }
+}
